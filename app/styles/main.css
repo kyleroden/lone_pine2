@@ -1,0 +1,177 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p, a {
+    font-family: 'Signika', sans-serif;
+    /*
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  */
+}
+#wrapper {
+  min-height: 100vh;
+}
+i {
+    color: white;
+}
+.small {
+    font-size: smaller;
+    margin-bottom: 0px;
+    padding: 0px 0px;
+}
+.row .box:hover {
+    background-color: rgb(48, 48, 48);
+}
+.box {
+    padding-right: 10px;
+    height: 100%;
+    position: relative;
+    transition: background-color 200ms ease-in-out;
+    float: left;
+}
+.box:hover {
+    background-color: rgb(48, 48, 48);
+}
+.color_one {
+    background-color: black;
+}
+.color_two {
+    background-color: #48FFBB;
+}
+.color_three {
+    background-color: #FF8C88;
+}
+.color_four {
+    background-color: #25AECC;
+}
+.color_five {
+    background-color: #CC2567;
+}
+.color_six {
+    background-color: #669099;
+}
+.box p {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.box h1, h2, h3 {
+    color: white;
+}
+.caption_wrapper h2, h3, h4, p {
+    color: white;
+}
+.box_title_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 66.6%;
+}
+.caption_wrapper {
+    position: absolute;
+    bottom: 8%;
+    height: 33.33%;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.caption_wrapper h3 {
+    /*
+  border-bottom: 1px solid white;
+
+  padding-bottom: 10px;*/
+    width: 100%;
+    display: block;
+}
+.bottom_span {
+    width: 100%;
+    background-color: white;
+    height: 1px;
+    margin-bottom: 12px;
+}
+.row {
+    width: 100%;
+}
+.box {
+    height: 50vh;
+    width: 100%;
+    padding-bottom: 10%;
+}
+#menu_wrapper {
+  /*position: absolute;
+  top: 0;
+  */
+  background-color: dodgerblue;
+  width: 100vw;
+}
+#menu_wrapper > * {
+  float: left;
+}
+#menu_wrapper h1 {
+  color: white;
+}
+#menu_title_card {
+  width: 100vw;
+  height: 20vh;
+}
+#current_menu {
+  width: 100%;
+  float: left;
+  padding: 10px 10px;
+}
+#current_menu h1, h2, h3, p, a {
+  color: white;
+}
+/* styles for the menu page... approximating bootstrap without bootstrap*/
+
+.med_col_6 {
+  width: 100%;
+}
+@media screen and (min-width: 1050px) {
+    .row {
+        width: 100%;
+        height: 50vh;
+    }
+    .box {
+        height: 100%;
+        width: 33.3333%;
+        float: left;
+        margin: 0px 0px;
+        padding: 0px 0px;
+        display: inline-block;
+    }
+    #menu_title_card {
+      width: 33.3vw;
+      height: 100vh;
+    }
+    /* styles for the menu page, on screens larger than mobile... approximating bootstrap without bootstrap*/
+    .med_col_6 {
+      width: 50%;
+    }
+}
