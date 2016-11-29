@@ -43,7 +43,8 @@ i {
     padding: 0px 0px;
 }
 .row .box:hover {
-    background-color: rgb(48, 48, 48);
+    /*background-color: rgb(48, 48, 48);*/
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://www.placingbad.com/400/400');
 }
 .box {
     padding-right: 10px;
@@ -80,7 +81,7 @@ i {
 .box h1, h2, h3 {
     color: white;
 }
-.caption_wrapper h2, h3, h4, p {
+.caption_wrapper h2, h3, h4, h5, p {
     color: white;
 }
 .box_title_wrapper {
@@ -93,7 +94,7 @@ i {
 .caption_wrapper {
     position: absolute;
     bottom: 8%;
-    height: 33.33%;
+    height: 40%;
     width: 90%;
     margin-left: 5%;
     display: flex;
