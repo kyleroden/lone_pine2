@@ -14,25 +14,26 @@
  * limitations under the License.
  */
 
+
 /*
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
 
 html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 h1, h2, h3, h4, h5, p, a {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     /*
 text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   */
 }
 #wrapper {
   min-height: 100vh;
+  padding-bottom: 10px;
 }
 i {
     color: white;
@@ -41,45 +42,6 @@ i {
     font-size: smaller;
     margin-bottom: 0px;
     padding: 0px 0px;
-}
-.row .box:hover {
-    /*background-color: rgb(48, 48, 48);*/
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://www.placingbad.com/400/400');
-}
-.box {
-    padding-right: 10px;
-    height: 100%;
-    position: relative;
-    transition: background-color 200ms ease-in-out;
-    float: left;
-}
-.box:hover {
-    background-color: rgb(48, 48, 48);
-}
-.color_one {
-    background-color: black;
-}
-.color_two {
-    background-color: #48FFBB;
-}
-.color_three {
-    background-color: #FF8C88;
-}
-.color_four {
-    background-color: #25AECC;
-}
-.color_five {
-    background-color: #CC2567;
-}
-.color_six {
-    background-color: #669099;
-}
-.box p {
-    margin: 0px 0px;
-    padding: 0px 0px;
-}
-.box h1, h2, h3 {
-    color: white;
 }
 .caption_wrapper h2, h3, h4, h5, p {
     color: white;
@@ -90,6 +52,21 @@ i {
     justify-content: center;
     align-items: center;
     height: 66.6%;
+}
+.fa-tree {
+  margin-top: 10px;
+}
+i {
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+i.bounce {
+  margin-top: -10px;
+  /*
+  transition: margin-top;
+  transition-duration: 0.5s;
+
+*/
 }
 .caption_wrapper {
     position: absolute;
@@ -102,12 +79,9 @@ i {
     justify-content: center;
     align-items: flex-start;
 }
-.caption_wrapper h3 {
-    /*
-  border-bottom: 1px solid white;
-
-  padding-bottom: 10px;*/
+.caption_wrapper h3, h2 {
     width: 100%;
+    font-weight: 300;
     display: block;
 }
 .bottom_span {
@@ -124,37 +98,178 @@ i {
     width: 100%;
     padding-bottom: 10%;
 }
-#menu_wrapper {
-  /*position: absolute;
-  top: 0;
-  */
-  background-color: dodgerblue;
-  width: 100vw;
+
+/*
+.row .box:hover {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://www.placingbad.com/400/400');
 }
-#menu_wrapper > * {
-  float: left;
+*/
+
+.box {
+    padding-right: 10px;
+    background-size: cover;
+    height: 35vh;
+    position: relative;
+    /*transition: background-color 2s ease-in-out, background 200ms ease-in-out;
+    */
+    float: left;
+    transition: background-color 200ms ease-in-out, background-position 200ms ease-in-out
 }
-#menu_wrapper h1 {
+
+.color_one {
+    background-color: #33667F;
+}
+#box_one:hover {
+
+    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+*/
+}
+#box_one .box_title_wrapper h1 {
+    font-weight: 700;
+    font-size: 2.375em;
+}
+#box_one .caption_wrapper h4 {
+    font-weight: 200;
+}
+.color_two {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/huevosrancheros.jpg") center center;
+    background-size: cover;
+}
+#box_two:hover, #box_four:hover, #box_six:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.color_three {
+  background-color: #FF8D00;
+  /*  background-color: #D4CF3C;*/
+}
+#box_three {
+  transition: 1s opacity;
+  transition-delay: 1s;
+  /*  transition-property: background;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+*/
+}
+#box_three:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/oregon_map.jpg") center right;
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+}
+.color_four {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/farm2.jpg") top center;
+    background-size: cover;
+}
+.color_five {
+    background-color: #7F0A17;
+}
+.color_six {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/lone_pine.jpg")center center;
+}
+.box p {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+.box h1, h2, h3 {
+    color: white;
+}
+/* navigation styles */
+
+
+
+/*menu page styles*/
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.nav {
+  list-style: none;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+ul.nav li{
+  display: inline-flex;
+  padding: 2px 5px;
+}
+.navigation {
   color: white;
 }
-#menu_title_card {
-  width: 100vw;
-  height: 20vh;
+#nav_brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#current_menu {
-  width: 100%;
-  float: left;
-  padding: 10px 10px;
+#nav_brand h1 {
+  height: 30px;
+  margin: 13px 0;
 }
-#current_menu h1, h2, h3, p, a {
+#nav_brand a, p {
+  text-decoration: none;
   color: white;
+}
+#brand_icon {
+  align-self: center;
+  margin-top: 8px;
+}
+.nav {
+  cursor: pointer;
 }
 /* styles for the menu page... approximating bootstrap without bootstrap*/
+#menu_wrapper {
+  width: 94%;
+  padding-left: 5px;
 
+}
+#menu_wrapper ul {
+  list-style: none;
+}
+
+.menu_section_header {
+  background-color: #FF8D00;
+}
+h2.menu_section_header {
+  color: black;
+}
+.menu_section {
+  padding-left: 6px;
+  border-top: 1px solid white;
+}
+.menu_section ul {
+  padding-left: 0px;
+}
+.menu_item_title {
+  color: white;
+}
+.menu_item_desc {
+  color: white;
+}
 .med_col_6 {
-  width: 100%;
+    flex-basis: 100%;
+}
+/*
+#lunch_menu, #bev_menu {
+  border-top: 1px solid white;
+}
+*/
+@media screen and (min-width: 700px) {
+  #wrapper {
+    height: 1700px;
+  }
+.med_col_6 {
+    width: 49%;
+    float: left;
+}
 }
 @media screen and (min-width: 1050px) {
+    #wrapper {
+      margin: 0 auto;
+      padding: 0px 0px;
+      height: 850px;
+    }
     .row {
         width: 100%;
         height: 50vh;
@@ -167,12 +282,40 @@ i {
         padding: 0px 0px;
         display: inline-block;
     }
+    .navigation {
+      width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    #nav_brand {
+      display: block;
+      flex-direction: row;
+      align-self: flex-start;
+    }
+    #nav_brand i, h1 {
+      display: inline-block;
+    }
+    #nav_brand i {
+      margin-right: 10px;
+    }
+
+    #menu_wrapper {
+      width: 1100px;
+      margin: 0 auto;
+    }
     #menu_title_card {
-      width: 33.3vw;
-      height: 100vh;
+        width: 33.3vw;
+        height: 100vh;
     }
     /* styles for the menu page, on screens larger than mobile... approximating bootstrap without bootstrap*/
-    .med_col_6 {
-      width: 50%;
+
+    .lg_col_3 {
+      width: 32%;
+      float: left;
+    }
+    #lunch_menu {
+      border-top: none;
     }
 }

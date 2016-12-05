@@ -17,6 +17,7 @@
  *
  */
 /* eslint-env browser */
+/*
 (function() {
   'use strict';
 
@@ -72,78 +73,31 @@
     });
   }
 
-  // Your custom JavaScript goes here
+*/
+// Your custom JavaScript goes here
+(function() {
+    'use strict';
+    console.log("ready!");
 
-  //var divs = document.getElementsByClassName("box");
-  console.log("ready!");
-  var menu_wrapper = document.getElementById("menu_wrapper");
-  $(menu_wrapper).hide();
-
-  function expand_menu() {
-      //var box1 = document.getElementById("box_one");
-      //var box2 = document.getElementById("menu_box");
-      var row1 = document.getElementById("row_one");
-      var row2 = document.getElementById("row_two");
-      //var box_3 = document.getElementById("box_three");
-      //$(box1).toggle("slow");
-      //$(box2).toggle("slow");
-      $(row2).toggle("slow");
-      $(row1).toggle("slow");
-      //$(box_3).toggle("slow");
-      $("#wrapper").css("background-color", "#48FFBB");
-      $(menu_wrapper).show();
-  };
-  var menu_card = document.getElementById("menu_box");
-  menu_card.addEventListener("click", expand_menu);
-
-  const current_date = new Date();
-  const day_of_week = current_date.getDay();
-  const current_hour = current_date.getHours();
-  var hours_div = document.getElementById("open_closed");
-  console.log("Current Hour: " + current_hour);
-  //Write 'open now' as long as it's after 7 am, before 3pm, and not tuesday
-  if (current_hour >= 7 && current_hour < 15 && day_of_week !== 2) {
-      hours_div.textContent = 'Open now';
-  }
-  //write 'closed' if the day of the week is tuesday
-  else {
-      hours_div.textContent = 'Closed now';
-  }
-
-  /*script for hover styles */
-
-  /*log the ID of the div over which the mouse is hovered*/
-/*
-    $(.box).mouseover(function(){
-      $(this.id).css('backgroundColor', 'red')
-    }).mouseout(function(){
-      $(this.id).css('backgroundColor', 'blue')
-    })
-    function errorHandler(error) {
-      console.log(error.toString())
-      this.emit('end')
+    const current_date = new Date();
+    const day_of_week = current_date.getDay();
+    const current_hour = current_date.getHours();
+    var hours_div = document.getElementById("open_closed");
+    console.log("Current Hour: " + current_hour);
+    //Write 'open now' as long as it's after 7 am, before 3pm, and not tuesday
+    if (current_hour >= 7 && current_hour < 15 && day_of_week !== 2) {
+        hours_div.textContent = 'Open now';
     }
-    */
-    /*
-    let boxMouseHoverEvent = function(){
-        let boxes = document.getElementsByClassName("box");
-        boxes.onmouseover = logDivId;
-        console.log('the mouse went over a div.' + this.id +' , is the id of that div.');
-    };
-    */
-    /*
-    function logDivId() {
-      console.log("ID:" + this.id);
-    };
-    */
-
-
+    //write 'closed' if the day of the week is tuesday
+    else {
+        hours_div.textContent = 'Closed now';
+    }
 
     console.log("all scripts loaded");
 })();
-
+/*
 let changeBackgroundColor = function() {
-  /*console.log($(this).css('backgroundColor'));*/
+console.log($(this).css('backgroundColor'));
   $(document.getElementById("box_one")).css('backgroundColor', 'red');
 };
 let resetBackgroundColor = function() {
@@ -153,3 +107,52 @@ let resetBackgroundColor = function() {
 let boxes = document.getElementsByClassName("box");
 console.log(boxes);
 boxes.onmouseover = changeBackgroundColor;
+*/
+/*
+$("#box_one").onmouseover(console.log(this.style.backgroundColor).toString());
+*/
+
+let box1 = document.getElementById("box_one");
+
+
+$(box1).on("mouseenter",
+    function(event) {
+        event.preventDefault();
+        let box1 = document.getElementById("box_one");
+        console.log("The mouse entered box one.");
+        let box1_bg_style = window.getComputedStyle(box1, null)
+            .getPropertyValue("background");
+        console.log(box1_bg_style);
+    });
+
+let box_icons = document.getElementsByClassName("fa");
+//console.log(box_icons);
+Array.from(box_icons).forEach(function(icon) {
+
+    console.log(icon.id);
+});
+
+let captions = document.getElementsByClassName("caption_wrapper");
+
+$(captions).hover(function(){
+  //function for event when hover starts
+  //capture the icon which is located in the div which triggered the hover event
+    let target_icon = $(this).parent().find(".fa");
+    $(target_icon).stop().animate({
+      marginTop: '-11px',
+      opacity: .85
+    }, {
+      duration: 200
+    });
+},
+//function for event when hover ends
+  function() {
+    let target_icon = $(this).parent().find(".fa");
+    $(target_icon).stop().animate({
+      marginTop: '0px',
+      opacity: 1
+    }, {
+      duration: 80
+    });
+  }
+);
