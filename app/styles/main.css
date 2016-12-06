@@ -48,17 +48,27 @@ i {
 }
 .box_title_wrapper {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 66.6%;
 }
+#box_one .box_title_wrapper {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+    justify-content: flex-end;
+}
 .box_title_wrapper h1 {
   font-size: .8em;
 }
-.fa-tree {
-    margin-top: 10px;
-}
+
 i {
     transition-property: all;
     transition-duration: 0.4s;
@@ -78,6 +88,10 @@ i.bounce {
     width: 90%;
     margin-left: 5%;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -122,6 +136,7 @@ i.bounce {
 #box_one .box_title_wrapper h1 {
     font-weight: 700;
     font-size: 2em;
+    margin-top: .4em;
 }
 #box_one .caption_wrapper h4 {
     font-weight: 200;
@@ -176,6 +191,10 @@ i.bounce {
 
 .navigation {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -205,6 +224,10 @@ ul.nav a {
 }
 #nav_brand {
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -257,14 +280,10 @@ h2.menu_section_header {
 .med_col_6 {
     flex-basis: 100%;
 }
-@media screen and (min-device-width: 320px) and (max-device-width: 568px){
-    #box_one .box_title_wrapper {
-        justify-content: flex-end;
-    }
-}
+
 @media screen and (min-width: 700px) {
     #wrapper {
-        height: 1700px;
+        height: auto;
     }
     .med_col_6 {
         width: 49%;
@@ -273,12 +292,17 @@ h2.menu_section_header {
     .box_title_wrapper {
         justify-content: center;
     }
+    #box_one .box_title_wrapper {
+        justify-content: center;
+    }
+
     .box_title_wrapper h1 {
       font-size: 1em;
     }
     #box_one .box_title_wrapper h1 {
         font-weight: 700;
         font-size: 2.4em;
+        margin-top: .67em;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -303,6 +327,10 @@ h2.menu_section_header {
     .navigation {
         margin: 0 auto;
         display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         justify-content: space-between;
         flex-direction: row;
         padding: 0px 10px;

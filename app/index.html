@@ -11,9 +11,6 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Web Application Manifest -->
-    <link rel="manifest" href="manifest.json">
-
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Lone Pine Cafe">
@@ -41,7 +38,7 @@
             <a href="">
                 <div class="box color_one" id="box_one">
                     <div class="box_title_wrapper">
-                        <i class="fa fa-4x fa-tree" id="icon_one"></i>
+                        <i class="fa fa-3x fa-tree" id="icon_one"></i>
                         <h1>The Lone Pine Cafe</h1></div>
                     <div class="caption_wrapper">
                         <h4>Good food, done right.</h4><span class="bottom_span"></span>
@@ -109,43 +106,9 @@
             </a>
         </div>
     </div>
-    <!--
-    <script>
-        //script to eliminate render blocking
-
-        let css_scripts = [
-            "https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700",
-            "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css",
-            "https://use.fontawesome.com/7867b48cfa.js",
-            "https://code.jquery.com/jquery-3.1.1.min.js",
-            "scripts/main.js",
-            "styles/main.css"
-        ];
-        for (let i = 0; i < css_scripts.length; i++) {
-            let resource = document.createElement('link');
-            resource.setAttribute("rel", "stylesheet");
-            resource.setAttribute("href", css_scripts[i]);
-            resource.setAttribute("type", "text/css");
-            let head = document.getElementsByTagName('head')[0];
-            head.appendChild(resource);
-        }
-        let js_scripts = [
-            "https://use.fontawesome.com/7867b48cfa.js",
-            "https://code.jquery.com/jquery-3.1.1.min.js",
-            "scripts/main.js"
-        ];
-        for (let i = 0; i < js_scripts.length; i++) {
-            let resource = document.createElement('script');
-            resource.setAttribute("src", js_scripts[i]);
-            resource.setAttribute("async", "");
-            let head = document.getElementsByTagName('head')[0];
-            head.appendChild(resource);
-        }
-    </script>
-  -->
     <script src="https://use.fontawesome.com/7867b48cfa.js" async defer></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" async defer></script>
-    <script src="scripts/main.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
     <!--google web font loader library to prevent render blocking-->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
     <script async defer>

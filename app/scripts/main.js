@@ -61,5 +61,13 @@
         }
     );
 
+    $(window).on("load", function () {
+        if ($(window).width() > 700) {
+          console.log("screen is larger than 700px")
+            $('#icon_one').removeClass('fa-3x');
+            $('#icon_one').addClass('fa-4x');
+        }
+    });
+
     console.log("all scripts loaded");
 })();
