@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -23,45 +24,44 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Lone Pine Cafe">
     <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-      <!-- Your styles -->
+
+<!--
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
+-->
+    <!-- Your styles -->
+
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
-  </head>
-  <body class="">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="">
     <div id="wrapper">
         <div class="row" id="row_one">
-          <a href="">
-            <div class="box color_one" id="box_one">
-                <div class="box_title_wrapper">
-
+            <a href="">
+                <div class="box color_one" id="box_one">
+                    <div class="box_title_wrapper">
                         <i class="fa fa-4x fa-tree" id="icon_one"></i>
-
-                    <h1>The Lone Pine Cafe</h1></div>
-                <div class="caption_wrapper">
-                    <h4>Good food, done right.</h4><span class="bottom_span"></span>
-                    <p class="">7a - 3p | Wednesday - Monday | <span id="open_closed"></span></p>
+                        <h1>The Lone Pine Cafe</h1></div>
+                    <div class="caption_wrapper">
+                        <h4>Good food, done right.</h4><span class="bottom_span"></span>
+                        <p class="">7a - 3p | Wednesday - Monday | <span id="open_closed"></span></p>
+                    </div>
                 </div>
-            </div>
-          </a>
+            </a>
 
-<a href="menu.html">
-            <div class="box color_two" id="box_two">
-                <div class="box_title_wrapper">
+            <a href="menu.html">
+                <div class="box color_two" id="box_two">
+                    <div class="box_title_wrapper">
 
                         <i class="fa fa-5x fa-spoon" id="icon_two"></i>
 
+                    </div>
+                    <div class="caption_wrapper">
+                        <h2>Menu</h2><span class="bottom_span"></span>
+                        <p class="">Check out our grub.</p>
+                    </div>
                 </div>
-                <div class="caption_wrapper">
-                    <h2>Menu</h2><span class="bottom_span"></span>
-                    <p class="">Check out our grub.</p>
-                </div>
-            </div>
             </a>
 
             <a href="">
@@ -109,14 +109,52 @@
             </a>
         </div>
     </div>
-    <script src="https://use.fontawesome.com/7867b48cfa.js"></script>
+    <!--
+    <script>
+        //script to eliminate render blocking
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-
+        let css_scripts = [
+            "https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700",
+            "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css",
+            "https://use.fontawesome.com/7867b48cfa.js",
+            "https://code.jquery.com/jquery-3.1.1.min.js",
+            "scripts/main.js",
+            "styles/main.css"
+        ];
+        for (let i = 0; i < css_scripts.length; i++) {
+            let resource = document.createElement('link');
+            resource.setAttribute("rel", "stylesheet");
+            resource.setAttribute("href", css_scripts[i]);
+            resource.setAttribute("type", "text/css");
+            let head = document.getElementsByTagName('head')[0];
+            head.appendChild(resource);
+        }
+        let js_scripts = [
+            "https://use.fontawesome.com/7867b48cfa.js",
+            "https://code.jquery.com/jquery-3.1.1.min.js",
+            "scripts/main.js"
+        ];
+        for (let i = 0; i < js_scripts.length; i++) {
+            let resource = document.createElement('script');
+            resource.setAttribute("src", js_scripts[i]);
+            resource.setAttribute("async", "");
+            let head = document.getElementsByTagName('head')[0];
+            head.appendChild(resource);
+        }
+    </script>
+  -->
+    <script src="https://use.fontawesome.com/7867b48cfa.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" async defer></script>
+    <script src="scripts/main.js" async defer></script>
+    <!--google web font loader library to prevent render blocking-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script async defer>
+      WebFont.load({
+        google: {
+          families: ['Titillium Web:300,400,700']
+        }
+      });
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -129,5 +167,6 @@
   -->
 
 
-  </body>
+</body>
+
 </html>
