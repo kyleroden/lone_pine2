@@ -46,7 +46,7 @@
                 marginTop: '-11px',
                 opacity: .85
             }, {
-                duration: 200
+                duration: 150
             });
         },
         //function for event when hover ends

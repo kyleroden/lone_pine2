@@ -1,27 +1,4 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-
-/*
-Note: any .css or .scss files included in the 'styles' directory
-will be correctly compiled during `gulp serve` and `gulp`
- */
-
 html, body {
-    font-family: 'Roboto', 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -71,15 +48,7 @@ i {
 
 i {
     transition-property: all;
-    transition-duration: 0.4s;
-}
-i.bounce {
-    margin-top: -10px;
-    /*
-  transition: margin-top;
-  transition-duration: 0.5s;
-
-*/
+    transition-duration: 0.2s;
 }
 .caption_wrapper {
     position: absolute;
@@ -121,18 +90,13 @@ i.bounce {
     background-size: cover;
     height: 35vh;
     position: relative;
-    /*transition: background-color 2s ease-in-out, background 200ms ease-in-out;
-    */
     float: left;
     transition: background-color 200ms ease-in-out, background-position 200ms ease-in-out
 }
 .color_one {
     background-color: #33667F;
 }
-#box_one:hover {
-    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-*/
-}
+
 #box_one .box_title_wrapper h1 {
     font-weight: 700;
     font-size: 2em;
@@ -150,15 +114,10 @@ i.bounce {
 }
 .color_three {
     background-color: #FF8D00;
-    /*  background-color: #D4CF3C;*/
 }
 #box_three {
     transition: 1s opacity;
     transition-delay: 1s;
-    /*  transition-property: background;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-*/
 }
 #box_three:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/oregon_map.jpg") center right;
@@ -187,7 +146,7 @@ i.bounce {
 /* navigation styles */
 
 
-/*menu page styles*/
+
 
 .navigation {
     display: flex;
