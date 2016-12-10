@@ -106,7 +106,7 @@ i {
     font-weight: 200;
 }
 .color_two {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/huevosrancheros.jpg") center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/huevosrancheros.jpg") center center;
     background-size: cover;
 }
 #box_two:hover, #box_four:hover, #box_six:hover {
@@ -120,20 +120,20 @@ i {
     transition-delay: 1s;
 }
 #box_three:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/oregon_map.jpg") center right;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/oregon_map.jpg") center right;
     transition-property: opacity;
     transition-duration: 3s;
     transition-timing-function: ease-in;
 }
 .color_four {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/farm2.jpg") top center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/farm2.jpg") top center;
     background-size: cover;
 }
 .color_five {
     background-color: #7F0A17;
 }
 .color_six {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/lone_pine.jpg")center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lone_pine.jpg")center center;
 }
 .box p {
     margin: 0px 0px;
